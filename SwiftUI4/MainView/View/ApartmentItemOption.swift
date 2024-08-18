@@ -8,16 +8,14 @@
 import SwiftUI
 
 struct ApartmentItemOption: View {
-    let optionName: String
-    let optionValue: String
+    let option: ApartmentItem
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text(optionName)
+            Text(option.optionName)
                 .foregroundStyle(.gray)
-            Text(optionValue)
+            Text(option.optionValue)
         }
-//      .frame(maxWidth: .infinity)
         .padding(.vertical, 10)
         .padding(.horizontal, 13)
         .font(.system(size: 12))

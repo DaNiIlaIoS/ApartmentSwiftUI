@@ -9,14 +9,15 @@ import Foundation
 
 struct Apartment: Identifiable {
     let id = UUID()
-    let image: String
+    let mainImage: String
     let title: String
     let price: String
     let place: String
     let options: [ApartmentItem]
+    let descriptionImages: [String]
     
     static func mockData() -> [Apartment] {
-        [Apartment(image: "appartment0",
+        [Apartment(mainImage: "appartment0",
                    title: "Ольховый Квартал",
                    price: "8 029 445",
                    place: "Москва, поселение Сосенское, деревня Столбово",
@@ -25,9 +26,10 @@ struct Apartment: Identifiable {
                              ApartmentItem(optionName: "1-комн.",
                                            optionValue: "от 10,1 млн ₽"),
                              ApartmentItem(optionName: "2-комн.",
-                                           optionValue: "от 11,4 млн ₽")]),
+                                           optionValue: "от 11,4 млн ₽")],
+                   descriptionImages: ["appartment01", "appartment02", "appartment03", "appartment04"]),
          
-         Apartment(image: "appartment1",
+         Apartment(mainImage: "appartment1",
                    title: "Новое Видное",
                    price: "4 735 485",
                    place: "Городское поселение Горки Ленинские, Ленинский городской округ, Московская область",
@@ -36,6 +38,7 @@ struct Apartment: Identifiable {
                              ApartmentItem(optionName: "1-комн.",
                                            optionValue: "от 5,6 млн ₽"),
                              ApartmentItem(optionName: "2-комн.",
-                                           optionValue: "от 6,3 млн ₽ ")])]
+                                           optionValue: "от 6,3 млн ₽ ")],
+                   descriptionImages: ["appartment11", "appartment12", "appartment13", "appartment14"])]
     }
 }

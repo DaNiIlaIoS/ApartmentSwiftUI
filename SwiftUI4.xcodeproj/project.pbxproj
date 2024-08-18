@@ -17,6 +17,8 @@
 		48D947B92C70D2CB005A1CE8 /* ApartmentItemOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D947B82C70D2CB005A1CE8 /* ApartmentItemOption.swift */; };
 		48D947BB2C70D2EE005A1CE8 /* BoldText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D947BA2C70D2EE005A1CE8 /* BoldText.swift */; };
 		48D947BE2C70E8AC005A1CE8 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D947BD2C70E8AC005A1CE8 /* DetailsView.swift */; };
+		48D947C02C722384005A1CE8 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D947BF2C722384005A1CE8 /* ContentViewModel.swift */; };
+		48D947C42C723628005A1CE8 /* BottomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D947C32C723628005A1CE8 /* BottomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		48D947B82C70D2CB005A1CE8 /* ApartmentItemOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApartmentItemOption.swift; sourceTree = "<group>"; };
 		48D947BA2C70D2EE005A1CE8 /* BoldText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoldText.swift; sourceTree = "<group>"; };
 		48D947BD2C70E8AC005A1CE8 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		48D947BF2C722384005A1CE8 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		48D947C32C723628005A1CE8 /* BottomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 		48D947B52C70CA28005A1CE8 /* MainView */ = {
 			isa = PBXGroup;
 			children = (
+				48D947C12C722A75005A1CE8 /* ViewModel */,
 				48D947BC2C70D35E005A1CE8 /* Model */,
 				48D947B72C70D293005A1CE8 /* View */,
 			);
@@ -92,7 +97,7 @@
 		48D947B62C70CA2E005A1CE8 /* DetailsView */ = {
 			isa = PBXGroup;
 			children = (
-				48D947BD2C70E8AC005A1CE8 /* DetailsView.swift */,
+				48D947C22C72361D005A1CE8 /* View */,
 			);
 			path = DetailsView;
 			sourceTree = "<group>";
@@ -115,6 +120,23 @@
 				48D947AF2C6FA9A6005A1CE8 /* Apartment.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		48D947C12C722A75005A1CE8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				48D947BF2C722384005A1CE8 /* ContentViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		48D947C22C72361D005A1CE8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				48D947BD2C70E8AC005A1CE8 /* DetailsView.swift */,
+				48D947C32C723628005A1CE8 /* BottomButton.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +214,8 @@
 				48D947B92C70D2CB005A1CE8 /* ApartmentItemOption.swift in Sources */,
 				48D947B02C6FA9A6005A1CE8 /* Apartment.swift in Sources */,
 				48B145052C6E20D700C1234A /* ContentView.swift in Sources */,
+				48D947C02C722384005A1CE8 /* ContentViewModel.swift in Sources */,
+				48D947C42C723628005A1CE8 /* BottomButton.swift in Sources */,
 				48D947BE2C70E8AC005A1CE8 /* DetailsView.swift in Sources */,
 				48D947BB2C70D2EE005A1CE8 /* BoldText.swift in Sources */,
 				48B145032C6E20D700C1234A /* SwiftUI4App.swift in Sources */,

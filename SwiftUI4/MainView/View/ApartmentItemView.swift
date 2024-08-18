@@ -13,7 +13,7 @@ struct ApartmentItemView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 14) {
             ZStack(alignment: Alignment(horizontal: .trailing, vertical: .top)) {
-                Image(item.image)
+                Image(item.mainImage)
                     .resizable()
                     .frame(height: 185)
                     .clipShape(RoundedRectangle(cornerRadius: 15))
@@ -25,6 +25,7 @@ struct ApartmentItemView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 6))
                         .overlay {
                             Image(systemName: "bookmark")
+                                .foregroundStyle(.blue)
                         }
                 }
                 .frame(width: 30, height: 30)
@@ -41,7 +42,7 @@ struct ApartmentItemView: View {
                 }
                 HStack(spacing: 4) {
                     ForEach(item.options) { option in
-                        ApartmentItemOption(optionName: option.optionName, optionValue: option.optionValue)
+                        ApartmentItemOption(option: option)
                     }
                     
                 }

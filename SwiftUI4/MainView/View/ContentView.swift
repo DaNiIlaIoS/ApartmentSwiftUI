@@ -8,24 +8,44 @@
 import SwiftUI
 
 struct ContentView: View {
-    private let apartments: [Apartment] = Apartment.mockData()
-    private let rows = [GridItem(.flexible())]
+    @StateObject private var viewModel = ContentViewModel()
     
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading) {
-                    Text("10 предложений")
-                    LazyVGrid(columns: rows, spacing: 10) {
-                        ForEach(apartments) { apartment in
+                    Text(getApartmentsText(for: viewModel.apartments.count))
+                    
+                    ForEach(viewModel.apartments) { apartment in
+                        NavigationLink {
+                            DetailsView(apartment: apartment)
+                                .toolbar(.hidden, for: .navigationBar)
+                        } label: {
                             ApartmentItemView(item: apartment)
+                                .foregroundStyle(.black)
                         }
                     }
                 }
                 .padding(.horizontal, 18)
             }
             .background(Color.appLigth)
+            
         }
+    }
+    
+    func getApartmentsText(for count: Int) -> String {
+        let form: String
+        
+        switch count % 10 {
+        case 1 where count % 100 != 11:
+            form = "предложение"
+        case 2...4 where !(11...14).contains(count % 100):
+            form = "предложения"
+        default:
+            form = "предложений"
+        }
+        
+        return "\(count) \(form)"
     }
 }
 
