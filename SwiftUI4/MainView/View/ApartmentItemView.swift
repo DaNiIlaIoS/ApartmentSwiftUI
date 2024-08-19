@@ -17,19 +17,7 @@ struct ApartmentItemView: View {
                     .resizable()
                     .frame(height: 185)
                     .clipShape(RoundedRectangle(cornerRadius: 15))
-                Button {
-                    //
-                } label: {
-                    Rectangle()
-                        .foregroundStyle(.white)
-                        .clipShape(RoundedRectangle(cornerRadius: 6))
-                        .overlay {
-                            Image(systemName: "bookmark")
-                                .foregroundStyle(.blue)
-                        }
-                }
-                .frame(width: 30, height: 30)
-                .padding()
+                Bookmark()
             }
             
             VStack(alignment: .leading, spacing: 15) {

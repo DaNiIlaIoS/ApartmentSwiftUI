@@ -78,19 +78,7 @@ struct DetailsView: View {
                         }
                         .foregroundStyle(.white)
                         Spacer()
-                        Button {
-                            //
-                        } label: {
-                            Rectangle()
-                                .foregroundStyle(.white)
-                                .clipShape(RoundedRectangle(cornerRadius: 6))
-                                .overlay {
-                                    Image(systemName: "bookmark")
-                                }
-                        }
-                        .frame(width: 30, height: 30)
-                        .padding()
-
+                        Bookmark()
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal, 20)
